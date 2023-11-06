@@ -1,3 +1,3 @@
-# Python DSA
+# Java DSA
 
-- Python DSA code goes here
+- Java DSA code goes here
