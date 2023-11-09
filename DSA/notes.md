@@ -1,5 +1,0 @@
-# Notes as I go
-
-## What the Hell are Generics in Java???????
-
-- 
