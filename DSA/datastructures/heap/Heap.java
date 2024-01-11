@@ -6,6 +6,10 @@ public class Heap {
     //helper methods go here to make insert and all that easier
      private List<Integer> heap;
 
+    public Heap() {
+        this.heap = new ArrayList<>();
+    }
+
      private int leftChild(int index) {
          return 2 * index + 1;
      }
@@ -24,13 +28,18 @@ public class Heap {
          heap.set(index2, temp);
      }
 
-     public Heap() {
-         this.heap = new ArrayList<>();
-     }
-
      public List<Integer> getHeap() {
          return new ArrayList<>(heap);
          // return copy of the heap so nobody can mess with it
+     }
+
+     public void insert(int value) {
+         heap.add(value);
+         int current = heap.size() - 1; //end of list. Latest addition goes here
+         while (current > 0 && heap.get(current) > heap.get(parent(current)) ) {
+             swap(current, parent(current));
+             current = parent(current);
+         }
      }
 
 
